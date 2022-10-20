@@ -1,0 +1,27 @@
+<!--
+File name: navbar.ejs
+Student name: Sunehildeep Singh
+Student ID: 301210976
+Date: 18th Sept, 2022
+-->
+<!-- Navigation Bar Section. -->
+<nav id="nav" class="nav">
+    <label for="checkbox_toggle" id="hamburger" class="hamburger">&#9776;</label>
+
+    <div class="navheader" id="navheader">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Me</a></li>
+            <li><a href="/experience">Services</a></li>
+            <li><img src="/images/logo.png"></li>
+            <li><a href="/projects">My Work</a></li>
+            <li><a href="/contact">Contact Me</a></li>
+            <% if(typeof displayName == 'string' && displayName) { %>
+                <li><a href="/logout">Logout</a></li>
+            <% } else { %>
+            <li><a href="/login">Login</a></li>
+            <% } %>
+
+        </ul>
+    </div>
+</nav>
